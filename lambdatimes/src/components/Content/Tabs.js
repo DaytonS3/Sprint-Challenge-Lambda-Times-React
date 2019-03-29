@@ -9,7 +9,7 @@ const Tabs = props => {
       <div className="topics">
         <span className="title">TRENDING TOPICS:</span>
         {props.tabs.map(tab => (
-          <Tab selectHandler={props.selectHandler}
+          <Tab selectTabHandler={props.selectHandler}
           selectedTab={props.selectedTab}
           tab={tab} key={Math.random()} />
         ))}
@@ -19,8 +19,8 @@ const Tabs = props => {
 };
 
 Tabs.propTypes = {
-  selectHandler: PropTypes.func,
-  tabs: PropTypes.arrayOf(PropTypes.string)
+  selectTabHandler: PropTypes.func,
+  tabs: PropTypes.array
 }
 
 // Make sure to use PropTypes to validate your types!
